@@ -1,0 +1,9 @@
+.nav-wrapper{
+    padding: 1rem 2rem;
+}
+.active{
+    background-color: maroon;
+}
+.price {
+    font-size: 2rem;
+}

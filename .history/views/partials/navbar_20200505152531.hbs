@@ -1,0 +1,50 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Courses App</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      {{#if isHome }}
+      <li><a class="active" href="/">Home Page</a></li>
+      {{else}}
+      <li><a href="/">Home Page</a></li>
+      {{/if}}
+
+      {{#if isCourses }}
+      <li><a class="active-tab" href="/courses">Courses</a></li>
+      {{else}}
+      <li><a href="/courses">Courses</a></li>
+      {{/if}}
+
+      {{#if isAuth}}
+          {{#if isAdd }}
+          <li><a class="active-tab" href="/add">Add courses</a></li>
+          {{else}}
+          <li><a href="/add">Add courses</a></li>
+          {{/if }}
+
+          {{#if isCard }}
+          <li><a class="active-tab" href="/card">Cart</a></li>
+          </li>
+          {{else}}
+          <li><a href="/card">Cart</a></li>
+          </li>
+          {{/if }}
+
+          {{#if isOrder }}
+          <li><a class="active-tab" href="/orders">Orders</a></li>
+          </li>
+          {{else}}
+          <li><a href="/orders">Orders</a></li>
+          </li>
+          {{/if }}
+      {{else}}
+           {{#if isLogin }}
+            <li><a class="active-tab" href="/auth/login#login">Sign In</a></li>
+            </li>
+            {{else}}
+            <li><a href="/auth/login#login">Sign In</a></li>
+            </li>
+            {{/if }}
+      {{/if}}
+    </ul>
+  </div>
+</nav>

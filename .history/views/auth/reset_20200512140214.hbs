@@ -1,0 +1,29 @@
+<div class="row">
+    <div id="login" class="col s6 offset-s3">
+        {{#if loginError}}
+        <p class="alert">{{loginError}}</p>
+        {{/if}}
+        <h1>Enter in Storige</h1>
+        <form action="/auth/login" method="POST">
+            <div class="input-field">
+                <input placeholder="email" name="email" id="email" type="text" class="validate" required>
+                <label for="email">Enter Email</label>
+                <span class="helper-text" data-error="Enter email"></span>
+            </div>
+
+            <div class="input-field">
+                <input placeholder="password" id="password" name="password" type="password" class="validate" required>
+                <label for="password">Password</label>
+                <span class="helper-text" data-error="Enter password"></span>
+            </div>
+
+            <p>
+                <input type="hidden" name="_csrf" value="{{csrf}}" />
+                <button type="submit" class="btn btn-primary">Sign In</button>
+            </p>
+
+        </form>
+
+    </div>
+
+</div>

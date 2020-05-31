@@ -1,0 +1,60 @@
+<div class="auth">
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s6"><a class="active" href="#login">Login</a></li>
+        <li class="tab col s6"><a href="#register">Registration</a></li>
+      </ul>
+    </div>
+    <div id="login" class="col s6 offset-s3">
+      <h1>Enter in Storige</h1>  
+      <form action="/add" method="POST">
+        <div class="input-field">
+          <input placeholder="email" name="email" id="email" type="text" class="validate" required>
+          <label for="email">Enter Email</label>
+          <span class="helper-text" data-error="Enter email"></span>
+        </div>
+
+        <div class="input-field">
+          <input placeholder="password" id="password" name="password" type="password" class="validate" required>
+          <label for="password">Password</label>
+          <span class="helper-text" data-error="Enter password"></span>
+        </div>
+        
+        <p>
+          <button type="submit" class="btn btn-primary">Sign In</button>
+        </p>
+
+      </form>
+
+    </div>
+    <div id="register" class="col s6 offset-s3">
+      <h1>Enter in Storige</h1>  
+      <form action="/add" method="POST">
+        <div class="input-field">
+          <input placeholder="email" name="email" id="remail" type="text" class="validate" required>
+          <label for="remail">Enter Email</label>
+          <span class="helper-text" data-error="Enter email"></span>
+        </div>
+
+        <div class="input-field">
+          <input placeholder="password" id="rpassword" name="password" type="password" class="validate" required>
+          <label for="rpassword">Password</label>
+          <span class="helper-text" data-error="Enter password"></span>
+        </div>
+
+        <div class="input-field">
+          <input placeholder="Confirm password" id="confirm" name="confirm" type="password" class="validate" required>
+          <label for="confirm">Password</label>
+          <span class="helper-text" data-error="Enter password confirm"></span>
+        </div>
+        
+        <p>
+          <button type="submit" class="btn btn-primary">Registration</button>
+        </p>
+
+      </form>
+
+    </div>
+  </div>
+</div>
