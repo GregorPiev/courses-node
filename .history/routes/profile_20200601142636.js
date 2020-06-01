@@ -14,17 +14,13 @@ router.get('/', auth, async (req, res) => {
 router.post('/', auth, async (req, res) => {
     try {
         const user = await User.findById(req.user._id);
-        const toChange = {
-            name: req.body.name
-        }
-
-        if (req.file) {
-            toChange.avatarUrl = req.file.path;
-        }
-
-        Object.assign(user, toChange);
+        Object.assign(user, req.body);
         await user.save();
-        res.redirect('/profile');
+        res.status(422).render('profile', {
+            title: 'Profile',
+            isProfile: true,
+            user: req.user.toObject()
+        })
 
     } catch (err) {
 
